@@ -1,45 +1,61 @@
 .navbar-container {
-  position: sticky;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: rgb(0, 0, 0, 0.7);
-  padding: 20px;
+  background-color: #f8f8f8;
 }
 
 .navbar {
-  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.navbar-label {
+  margin: 0 15px;
 }
 
 .logo {
+  flex: 1;
   text-align: center;
 }
 
 .logo img {
-  max-height: 55px;
-  width: auto;
+  max-width: 100px;
 }
 
-/* .search-container {
-  margin: 0 10px;
-} */
+.search-container {
+  display: flex;
+  align-items: center;
+}
 
 .search-container input {
   padding: 5px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 100px;
+  border-radius: 4px;
 }
 
-.hero {
+.hero-container {
+  height: 60vh;
   position: relative;
-  height: 400px;
-  overflow: hidden; /* Hide any overflow */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
+  background-image: url("/assets/jerseys.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.hero-container > .hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 10px;
+  font-size: 4em;
+  font-family: "Sports", sans-serif;
+  letter-spacing: 5px;
+  opacity: 0.8;
+  color: darkslategrey;
   text-align: center;
+  border-radius: 8px;
 }
 
 .hero img {
