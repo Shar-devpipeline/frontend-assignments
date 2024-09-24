@@ -1,0 +1,226 @@
+/* Hero Seciton */
+
+.hero-container {
+  height: 800px;
+  position: relative;
+  background-image: url("/images/bookshelf.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.hero-container > .hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  padding: 10px;
+  font-size: 1.25em;
+  letter-spacing: 8px;
+  opacity: 0.8;
+  color: lightgrey;
+}
+
+/* About Seciton */
+
+.about-container {
+  text-align: center;
+  padding: 60px;
+}
+
+.about-container > .about-header > p:nth-of-type(1) {
+  font-style: italic;
+}
+.about-container > .about-header > p:nth-of-type(2) {
+  text-align: justify;
+}
+
+.about-container > .about-content-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin-top: 45px;
+  width: 100%;
+}
+
+.about-container > .about-content-container > .photo-wrapper {
+  margin: 25px;
+}
+
+/* Accolades */
+.accolades-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: darkslategray;
+  color: white;
+  height: 60px;
+  margin: 50px 0;
+}
+
+.accolades-container > .accolade-item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 15%;
+}
+
+.accolades-container > .accolade-item-wrapper > span {
+  color: lightgrey;
+}
+
+/* Portfolio Section */
+
+.portfolio-container > .portfolio-header-wrapper {
+  height: 700px;
+  position: relative;
+  background-image: url("/images/office.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.portfolio-container > .portfolio-header-wrapper > .portfolio-header-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  padding: 10px;
+  font-size: 1.25em;
+  letter-spacing: 8px;
+  opacity: 0.8;
+  color: lightgray;
+}
+.portfolio-container img {
+  width: 400px;
+  height: auto;
+}
+
+.portfolio-container > .portfolio-section-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolio-container > .portfolio-section-wrapper > .portfolio-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 10px;
+}
+
+/* Contact */
+
+.contact-container > .contact-header-wrapper {
+  position: relative;
+  height: 700px;
+  background-image: url("/images/phone.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-container > .contact-header-wrapper > .contact-header-content {
+  background-color: black;
+  padding: 10px;
+  font-size: 1.25em;
+  letter-spacing: 8px;
+  opacity: 0.8;
+  color: lightgray;
+}
+/* Contact Form */
+
+.contact-section-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+}
+
+.left-column {
+  width: 60%;
+  padding-left: 20px;
+}
+
+.rigth-column {
+  width: 40%;
+}
+
+.google-map-wrapper {
+  height: 300px;
+  width: fit-content;
+  border: #bdbdbd solid 1px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+form input,
+form textarea {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: rgb(161, 161, 161);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 60%;
+  margin: 0 auto;
+  transition: 0.2s ease-out;
+}
+
+button[type="submit"]:hover {
+  background-color: black;
+  transform: scale(0.98);
+  transition: 0.2s ease-in;
+}
+
+/* Footer */
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  color: white;
+  padding: 30px 50px;
+  font-size: 20px;
+}
+
+.return-link-wrapper a {
+  cursor: pointer;
+}
+.social-media-wrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.social-media-wrapper i {
+  font-size: 35px;
+  cursor: pointer;
+  transition: 0.2s ease-out;
+}
+
+.social-media-wrapper i:hover {
+  transform: scale(0.9);
+  transition: 0.2s ease-in;
+}

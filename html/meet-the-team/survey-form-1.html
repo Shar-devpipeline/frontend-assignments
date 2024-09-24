@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey</title>
+  </head>
+  <body>
+    <h2>Please take our survey</h2>
+    <hr/>
+    <form>
+      <h4>How did you hear about us?</h4>
+      <div class="how-did-you-hear">
+        <select name="hear-options">
+          <option value="friend">Friend</option>
+          <option value="ads">Ads</option>
+          <option value="social-media">Social Media</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <br /><br />
+      <h4>Rate your experience</h4>
+      <div class="experience-field">
+        <input name="rating" id="excellent" type="radio" value="excellent" />
+        <label for="exellent">Excellent</label>
+        <input name="rating" id="good" type="radio" value="good" />
+        <label for="good">Good</label>
+        <input name="rating" id="fair" type="radio" value="fair" />
+        <label for="fair">Fair</label>
+        <input name="rating" id="poor" type="radio" value="good" />
+        <label for="fair">Poor</label>
+      </div>
+      <br /><br />
+      <h4>Select your Interests</h4>
+      <div class="interests-field">
+        <input
+          name="interest"
+          id="technology"
+          type="checkbox"
+          value="technology"
+        />
+        <label for="technology">Technology</label>
+        <input name="interest" id="sports" type="checkbox" value="sports" />
+        <label for="sports">Sports</label>
+        <input name="interest" id="music" type="checkbox" value="music" />
+        <label for="music">Music</label>
+        <input name="interest" id="travel" type="checkbox" value="travel" />
+        <label for="travel">Travel</label>
+      </div>
+      <br /><br />
+      <div class="additional-comment-field">
+        <label for="additional-info"
+          >Please provide any additional Feedback</label
+        >
+        <textarea name="additional-info" id="additional-info" rows="2">
+Additional Feedback</textarea
+        >
+      </div>
+
+      <br/>
+      <div class="submit-field">
+        <button>Submit Survey</button>
+      </div>
+      <form>
+
+    </form>
+  </body>
+</html>

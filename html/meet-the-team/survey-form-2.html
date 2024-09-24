@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Form</title>
+  </head>
+  <body>
+    <h1>Product Order Form</h1>
+    <hr />
+    <form>
+      <div class="product-name-field">
+        <label for="product-name">Product Name</label>
+        <input
+          id="product"
+          name="product-name"
+          type="text"
+          placeholder="ex. peaches"
+        />
+      </div>
+      <br />
+      <div class="quantity-field">
+        <label for="quantity">Quantity</label>
+        <input
+          id="quantity"
+          name="quantity-amount"
+          type="number"
+          value="quantity-amount"
+          placeholder="ex. 5"
+        />
+      </div>
+      <br />
+      <div class="delivery-address-field"></div>
+        <label for="delivery-address"
+          >Please provide delivery address:</label
+        >
+        <textarea name="delivery-address" id="delivery-address" rows="2" placeholder="123 S. 300 E"></textarea
+        >
+      </div>
+      <br/><br/>
+      <div class="delivery-date-field"></div>
+        <label for="delivery-date">Preffered Delivery Date</label>
+        <input
+          id="delivery-date"
+          name="delivery-date"
+          type="date"
+          value="delivery-date"
+        />
+      </div>
+      <br/><br/>
+      <div class="gift-wrapping-field">
+        <input name="gift-wrapping" id="gift-wrapping" type="checkbox" value="yes">
+        <label for="gift-wrapping">Would you like your gift wrapped?</label>
+
+      </div>
+      <br/>
+      <div class="payment-method-field"> Payment Method:
+        <input name="payment-method" id="credit-card" type="radio" value="credit-card">
+        <label for="credit-card">Credit Card</label>
+        <input name="payment-method" id="paypal" type="radio" value="paypal">
+        <label for="paypal">PayPal</label>
+        <input name="payment-method" id="bank-transfer" type="radio" value="bank-transfer">
+        <label for="bank-transfer">Bank Transfer</label>
+      </div>
+      <br/>
+      <div class="submit-field">
+        <input type="submit" value="Place Order">
+      </div>
+    </form>
+  </body>
+</html>

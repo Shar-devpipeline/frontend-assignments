@@ -1,0 +1,31 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: white;
+  box-shadow: 0 0 10px rbga(0, 0, 0, 0.5);
+}
+
+.nav-container > .nav-links-wrapper > .nav-label,
+.nav-container > .nav-search {
+  display: inline-block;
+  padding: 15px;
+  cursor: pointer;
+}
+.nav-container > .nav-search > i {
+  transition: 0.3s ease-out;
+}
+.nav-container > .nav-search > i:hover {
+  transform: scale(1.4);
+  transition: 0.3s ease-in;
+}
+
+.nav-container > .nav-links-wrapper > .nav-label:hover {
+  background-color: #333;
+  color: rgb(161, 161, 161);
+  transition: 0.3s ease-in;
+}
