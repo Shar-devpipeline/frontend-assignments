@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+i {
+  margin: 5px;
+}
+
+img {
+  max-width: 80px;
+}
+.nav-bar {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  height: 110px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.login-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: "Edu AU VIC WA NT Dots", sans-serif;
+  height: 65vh;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.login-container > .login-img {
+  background-image: url("/assets/login-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 80%;
+  text-align: center;
+  color: white;
+  height: 65vh;
+  width: 50%;
+}
+
+.login-form {
+  width: 50%;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  width: 20%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #35434a;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e48b32;
+}
