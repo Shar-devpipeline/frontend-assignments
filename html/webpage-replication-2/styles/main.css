@@ -87,13 +87,15 @@ html {
 .mission-section span {
   margin-bottom: 20px;
   color: white;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: "Clarendon W01";
+  font-weight: lighter;
+  letter-spacing: 3px;
   font-size: 65px;
 }
 .mission-section p {
+  font-family: "Garamond" sans-serif;
   color: white;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 1.25em;
+  font-size: 21px;
   letter-spacing: 4px;
   opacity: 0.8;
   width: 60%;
