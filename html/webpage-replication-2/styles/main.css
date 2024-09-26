@@ -3,17 +3,14 @@ html {
   height: 100%;
 }
 * {
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  box-sizing: border-box; /* Include padding in width/height */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-/* Nav-bar */
 
 .nav-bar {
   display: flex;
   justify-content: center;
-  align-items: center;
   height: 120px;
   position: fixed;
   top: 0;
@@ -24,16 +21,9 @@ html {
 }
 
 .nav-bar img {
-  max-width: 200%;
   height: 90px;
   margin-top: 15px;
   margin-bottom: 15px;
-}
-.hero-container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
 }
 
 .hero-section {
@@ -64,8 +54,6 @@ html {
   justify-content: center;
   align-items: center;
   height: 70vh;
-  position: relative;
-  margin: 0;
   background-image: url("/assets/our-mission.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -79,21 +67,17 @@ html {
 }
 
 .mission-section img {
-  max-width: 100%;
-  height: auto;
   margin-bottom: 80px;
 }
 
 .mission-section span {
   margin-bottom: 20px;
   color: white;
-  font-family: "Clarendon W01";
-  font-weight: lighter;
+
   letter-spacing: 3px;
   font-size: 65px;
 }
 .mission-section p {
-  font-family: "Garamond" sans-serif;
   color: white;
   font-size: 21px;
   letter-spacing: 4px;
