@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trip Booker</title>
+    <link rel="stylesheet" href="/pages/webform.html" />
+    <link rel="stylesheet" href="/styles/nav.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/webform.css" />
+  </head>
+  <body>
+    <div class="navbar-container">
+      <div class="navbar-links-wrapper">
+        <div class="navbar-label">
+          <i class="fa-solid fa-user"></i>
+          <a href="/index.html">Home</a>
+        </div>
+        <div class="navbar-label">
+          <i class="fa-solid fa-user"></i>
+          <a href="#">About</a>
+        </div>
+        <div class="navbar-label">
+          <i class="fa-solid fa-book"></i>
+          <a href="/pages/webform.html">Book a Trip</a>
+        </div>
+        <div class="navbar-label">
+          <i class="fa-solid fa-phone"></i>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </div>
+    <form action="https://httpbin.org/post" method="post">
+      <div class="user-data-field">
+        <h1>Welcome to Booking your Adventure</h1>
+        <label for="first-name">First Name: </label>
+        <input
+          id="first-name"
+          name="first-name"
+          type="text"
+          placeholder="Jane"
+          required
+        />
+        <br /><br />
+        <label for="last-name">Last Name: </label>
+        <input
+          id="last-name"
+          name="last-name"
+          type="text"
+          placeholder="Doe"
+          required
+        />
+        <br /><br />
+        <label for="email">Email: </label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="jane@doe.com"
+          required
+        />
+        <br /><br />
+        <label for="phone">Phone: </label>
+        <input id="phone" name="phone" type="tel" placeholder="555-555-5555" />
+        <br /><br />
+        <label for="start-date">Start Date: </label>
+        <input id="start-date" name="start-date" type="date" required />
+        <br /><br />
+        <label for="end-date">End Date: </label>
+        <input id="end-date" name="end-date" type="date" required />
+        <br /><br />
+        <label for="comments">Comments:</label>
+        <textarea
+          id="comments"
+          name="comments"
+          placeholder="Any additional comments..."
+        ></textarea>
+        <br /><br />
+        <label for="friend">Would you like to invite a friend?</label>
+        <select id="friend" name="friend">
+          <option value="option1">Yes Please</option>
+          <option value="option2">No Thank you</option>
+          <option value="option3">Maybe</option>
+        </select>
+      </div>
+      <br />
+      <div class="extra-option-field">
+        Additional Accommodations:
+
+        <label for="rental-car">Rental car</label>
+        <input
+          name="extra-options"
+          id="rental-car"
+          type="checkbox"
+          value="rental-car"
+        />
+
+        <label for="hotel">Hotel</label>
+        <input name="extra-options" id="hotel" type="checkbox" value="hotel" />
+
+        <label for="ride-shares">Ride shares</label>
+        <input
+          name="extra-options"
+          id="ride-shares"
+          type="checkbox"
+          value="ride-shares"
+        />
+      </div>
+      <br />
+
+      <div class="package-field">
+        Which Package would you like?
+        <label for="premium-package">Premium</label>
+        <input
+          name="package"
+          id="premium-package"
+          type="radio"
+          value="premium"
+        />
+        <label for="basic-package">Basic</label>
+        <input name="package" id="basic-package" type="radio" value="basic" />
+      </div>
+      <br />
+      <div class="submit-field">
+        <button type="submit">Book my Reservation</button>
+      </div>
+      <br />
+    </form>
+  </body>
+</html>

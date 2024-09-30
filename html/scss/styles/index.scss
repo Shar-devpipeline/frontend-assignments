@@ -1,0 +1,31 @@
+$base-color: lightblue;
+$accent-color: darkblue;
+$base-font-size: 24px;
+$gradient-theme: linear-gradient($accent-color, $base-color);
+
+* {
+  margin: 0;
+}
+
+.hero-img {
+  background: $gradient-theme;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-msg-con {
+  border: 16px solid $accent-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  width: 250px;
+}
+
+.hero-msg {
+  text-align: center;
+  // color: $accent-color;
+  // font-size: 48px;
+}

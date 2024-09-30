@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+}
+
+.hero-img {
+  background: linear-gradient(darkblue, lightblue);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-msg-con {
+  border: 16px solid darkblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  width: 250px;
+}
+
+.hero-msg {
+  text-align: center;
+}/*# sourceMappingURL=index.css.map */

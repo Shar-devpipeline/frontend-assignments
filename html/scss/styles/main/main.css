@@ -1,0 +1,35 @@
+:root {
+  --primary-font: "Arial", sans-serif;
+  --accent-color: white;
+  --thick-border: 10px solid var(--accent-color);
+  --gradient-theme: linear-gradient(var(--base-color), var(--accent-color));
+}
+
+* {
+  margin: 0;
+}
+
+.hero-img {
+  background: var(--gradient-theme);
+  background-color: var(--base-color);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-msg-con {
+  border: var(--thick-border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  width: 250px;
+}
+
+.hero-msg {
+  text-align: center;
+  font-family: var(--primary-font);
+  color: var(--accent-color);
+  font-size: 48px;
+}
