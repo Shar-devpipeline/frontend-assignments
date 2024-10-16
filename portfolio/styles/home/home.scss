@@ -1,0 +1,217 @@
+/* Hero Seciton */
+/* lines of code css 231 */
+@import "../common/common.css";
+
+@mixin background-img($url, $height: 700px) {
+  height: $height;
+  position: relative;
+  background-image: url("/images/#{$url}");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+@mixin background-position($color: $grey) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  padding: 10px;
+  font-size: 1.25em;
+  letter-spacing: 8px;
+  opacity: 0.8;
+  color: $color;
+}
+.page-container {
+  .hero-container {
+    @include background-img("bookshelf.jpg", 800px);
+
+    .hero-content {
+      @include background-position(lightgrey);
+    }
+  }
+
+  /* About Seciton */
+
+  .about-container {
+    text-align: center;
+    padding: 60px;
+
+    .about-header {
+      p:nth-of-type(1) {
+        font-style: italic;
+      }
+      p:nth-of-type(2) {
+        text-align: justify;
+      }
+    }
+
+    .about-content-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      margin-top: 45px;
+      width: 100%;
+      .photo-wrapper {
+        margin: 25px;
+      }
+    }
+  }
+
+  /* Accolades */
+  .accolades-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: darkslategray;
+    color: white;
+    height: 60px;
+    margin: 50px 0;
+    .accolade-item-wrapper {
+      display: flex;
+      justify-content: space-between;
+      width: 15%;
+      span {
+        color: $grey;
+      }
+    }
+  }
+
+  /* Portfolio Section */
+  .portfolio-container {
+    .portfolio-header-wrapper {
+      @include background-img("office.jpg");
+
+      .portfolio-header-content {
+        @include background-position();
+      }
+    }
+    img {
+      width: 400px;
+      height: auto;
+    }
+
+    .portfolio-section-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .portfolio-content-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 10px;
+      }
+    }
+  }
+
+  /* Contact */
+  .contact-container {
+    .contact-header-wrapper {
+      @include background-img("phone.jpg");
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .contact-header-content {
+        background-color: black;
+        padding: 10px;
+        font-size: 1.25em;
+        letter-spacing: 8px;
+        opacity: 0.8;
+        color: $grey;
+      }
+    }
+  }
+  /* Contact Form */
+
+  .contact-section-wrapper {
+    display: flex;
+    justify-content: center;
+
+    .container {
+      display: flex;
+      align-items: center;
+      width: 90%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+
+      .left-column {
+        width: 60%;
+        padding-left: 20px;
+        .google-map-wrapper {
+          height: 300px;
+          width: fit-content;
+          border: #bdbdbd solid 1px;
+        }
+      }
+
+      .rigth-column {
+        width: 40%;
+        form {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+
+          form input,
+          form textarea {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+          }
+
+          button[type="submit"] {
+            background-color: rgb(161, 161, 161);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 60%;
+            margin: 0 auto;
+            transition: 0.2s ease-out;
+            &:hover {
+              background-color: black;
+              transform: scale(0.98);
+              transition: 0.2s ease-in;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Footer */
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    color: white;
+    padding: 30px 50px;
+    font-size: 20px;
+
+    .return-link-wrapper a {
+      cursor: pointer;
+
+      .social-media-wrapper {
+        display: flex;
+        gap: 8px;
+
+        i {
+          font-size: 35px;
+          cursor: pointer;
+          transition: 0.2s ease-out;
+
+          &:hover {
+            transform: scale(0.9);
+            transition: 0.2s ease-in;
+          }
+        }
+      }
+    }
+  }
+}

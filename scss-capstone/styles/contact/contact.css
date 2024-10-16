@@ -1,0 +1,13 @@
+.iframe-container {
+  padding-top: 25px;
+  width: 95vw;
+  height: calc(100vh - 25px);
+  position: relative;
+}
+
+iframe {
+  width: 100%;
+  height: auto;
+  border: none;
+  display: block;
+}/*# sourceMappingURL=contact.css.map */

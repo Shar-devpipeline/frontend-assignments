@@ -1,6 +1,14 @@
 /* Hero Seciton */
+/* lines of code css 231 */
 
-.hero-container {
+/* About Seciton */
+/* Accolades */
+/* Portfolio Section */
+/* Contact */
+/* Contact Form */
+/* Footer */
+
+.page-container .hero-container {
   height: 800px;
   position: relative;
   background-image: url("/images/bookshelf.jpg");
@@ -9,8 +17,7 @@
   background-size: cover;
   background-attachment: fixed;
 }
-
-.hero-container > .hero-content {
+.page-container .hero-container .hero-content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -22,35 +29,27 @@
   opacity: 0.8;
   color: lightgrey;
 }
-
-/* About Seciton */
-
-.about-container {
+.page-container .about-container {
   text-align: center;
   padding: 60px;
 }
-
-.about-container > .about-header > p:nth-of-type(1) {
+.page-container .about-container .about-header p:nth-of-type(1) {
   font-style: italic;
 }
-.about-container > .about-header > p:nth-of-type(2) {
+.page-container .about-container .about-header p:nth-of-type(2) {
   text-align: justify;
 }
-
-.about-container > .about-content-container {
+.page-container .about-container .about-content-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   margin-top: 45px;
   width: 100%;
 }
-
-.about-container > .about-content-container > .photo-wrapper {
+.page-container .about-container .about-content-container .photo-wrapper {
   margin: 25px;
 }
-
-/* Accolades */
-.accolades-container {
+.page-container .accolades-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -59,20 +58,15 @@
   height: 60px;
   margin: 50px 0;
 }
-
-.accolades-container > .accolade-item-wrapper {
+.page-container .accolades-container .accolade-item-wrapper {
   display: flex;
   justify-content: space-between;
   width: 15%;
 }
-
-.accolades-container > .accolade-item-wrapper > span {
+.page-container .accolades-container .accolade-item-wrapper span {
   color: lightgrey;
 }
-
-/* Portfolio Section */
-
-.portfolio-container > .portfolio-header-wrapper {
+.page-container .portfolio-container .portfolio-header-wrapper {
   height: 700px;
   position: relative;
   background-image: url("/images/office.jpg");
@@ -81,7 +75,10 @@
   background-size: cover;
   background-attachment: fixed;
 }
-.portfolio-container > .portfolio-header-wrapper > .portfolio-header-content {
+.page-container
+  .portfolio-container
+  .portfolio-header-wrapper
+  .portfolio-header-content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -93,26 +90,24 @@
   opacity: 0.8;
   color: lightgray;
 }
-.portfolio-container img {
+.page-container .portfolio-container img {
   width: 400px;
   height: auto;
 }
-
-.portfolio-container > .portfolio-section-wrapper {
+.page-container .portfolio-container .portfolio-section-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-.portfolio-container > .portfolio-section-wrapper > .portfolio-content-grid {
+.page-container
+  .portfolio-container
+  .portfolio-section-wrapper
+  .portfolio-content-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0 10px;
 }
-
-/* Contact */
-
-.contact-container > .contact-header-wrapper {
+.page-container .contact-container .contact-header-wrapper {
   position: relative;
   height: 700px;
   background-image: url("/images/phone.jpg");
@@ -124,8 +119,10 @@
   justify-content: center;
   align-items: center;
 }
-
-.contact-container > .contact-header-wrapper > .contact-header-content {
+.page-container
+  .contact-container
+  .contact-header-wrapper
+  .contact-header-content {
   background-color: black;
   padding: 10px;
   font-size: 1.25em;
@@ -133,51 +130,65 @@
   opacity: 0.8;
   color: lightgray;
 }
-/* Contact Form */
-
-.contact-section-wrapper {
+.page-container .contact-section-wrapper {
   display: flex;
   justify-content: center;
 }
-.container {
+.page-container .contact-section-wrapper .container {
   display: flex;
   align-items: center;
   width: 90%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 40px;
 }
-
-.left-column {
+.page-container .contact-section-wrapper .container .left-column {
   width: 60%;
   padding-left: 20px;
 }
-
-.rigth-column {
-  width: 40%;
-}
-
-.google-map-wrapper {
+.page-container
+  .contact-section-wrapper
+  .container
+  .left-column
+  .google-map-wrapper {
   height: 300px;
+  width: -moz-fit-content;
   width: fit-content;
   border: #bdbdbd solid 1px;
 }
-
-form {
+.page-container .contact-section-wrapper .container .rigth-column {
+  width: 40%;
+}
+.page-container .contact-section-wrapper .container .rigth-column form {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-
-form input,
-form textarea {
+.page-container
+  .contact-section-wrapper
+  .container
+  .rigth-column
+  form
+  form
+  input,
+.page-container
+  .contact-section-wrapper
+  .container
+  .rigth-column
+  form
+  form
+  textarea {
   width: 90%;
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ddd;
   border-radius: 5px;
 }
-
-button[type="submit"] {
+.page-container
+  .contact-section-wrapper
+  .container
+  .rigth-column
+  form
+  button[type="submit"] {
   background-color: rgb(161, 161, 161);
   color: white;
   padding: 10px 20px;
@@ -188,16 +199,17 @@ button[type="submit"] {
   margin: 0 auto;
   transition: 0.2s ease-out;
 }
-
-button[type="submit"]:hover {
+.page-container
+  .contact-section-wrapper
+  .container
+  .rigth-column
+  form
+  button[type="submit"]:hover {
   background-color: black;
   transform: scale(0.98);
   transition: 0.2s ease-in;
 }
-
-/* Footer */
-
-.footer-container {
+.page-container .footer-container {
   display: flex;
   justify-content: space-between;
   background-color: #333;
@@ -205,22 +217,29 @@ button[type="submit"]:hover {
   padding: 30px 50px;
   font-size: 20px;
 }
-
-.return-link-wrapper a {
+.page-container .footer-container .return-link-wrapper a {
   cursor: pointer;
 }
-.social-media-wrapper {
+.page-container .footer-container .return-link-wrapper a .social-media-wrapper {
   display: flex;
   gap: 8px;
 }
-
-.social-media-wrapper i {
+.page-container
+  .footer-container
+  .return-link-wrapper
+  a
+  .social-media-wrapper
+  i {
   font-size: 35px;
   cursor: pointer;
   transition: 0.2s ease-out;
 }
-
-.social-media-wrapper i:hover {
+.page-container
+  .footer-container
+  .return-link-wrapper
+  a
+  .social-media-wrapper
+  i:hover {
   transform: scale(0.9);
   transition: 0.2s ease-in;
-}
+} /*# sourceMappingURL=home.css.map */

@@ -1,0 +1,400 @@
+@import "/styles/contact/contact.css";
+body,
+html {
+  max-height: 80vh;
+  overflow-y: auto;
+  margin: 0;
+}
+
+header {
+  background: linear-gradient(to right, #b32281, #d53176);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 90px;
+  max-height: 100px;
+  min-height: 150px;
+  z-index: -1;
+  position: relative;
+}
+
+.navbar-container {
+  display: block;
+  width: 95vw;
+  position: fixed;
+  top: 0;
+  background: white;
+  padding: 25px 20px;
+  box-shadow: 0 1px 10px -6px rgba(0, 0, 0, 0.42), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 4px 5px -2px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+.navbar-container .navbar-links-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 auto;
+  align-items: center;
+  width: 100%;
+}
+.navbar-container .navbar-links {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.navbar-container .navbar-links #hestia {
+  justify-self: flex-start;
+}
+.navbar-container .navbar-links .navbar-label {
+  margin: 0 15px;
+}
+.navbar-container .navbar-links .navbar-label a {
+  text-decoration: none;
+  color: #555;
+}
+
+#more-button {
+  cursor: pointer;
+  background-color: #d53176;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+#more-button:hover {
+  background-color: #af245e;
+}
+
+.blog-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+.blog-page-container .blog-articles {
+  background: white;
+  padding: 20px;
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2), 5px 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  overflow-y: auto;
+}
+@media (min-width: 1440px) {
+  .blog-page-container .blog-articles {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+  }
+}
+.blog-page-container .blog-articles article {
+  margin-bottom: 20px;
+}
+.blog-page-container .blog-articles article .category,
+.blog-page-container .blog-articles article .blog-title,
+.blog-page-container .blog-articles article .blog-description,
+.blog-page-container .blog-articles article .author {
+  margin: 0;
+}
+.blog-page-container .blog-articles article .category {
+  font-size: 0.9em;
+  color: #888;
+}
+.blog-page-container .blog-articles article .blog-title {
+  margin-top: 10px;
+  font-size: 1.5em;
+  color: #555;
+}
+.blog-page-container .blog-articles article .blog-description {
+  margin-top: 5px;
+  color: #555;
+}
+.blog-page-container .blog-articles article .blog-description .author {
+  margin-top: 10px;
+  font-size: 0.8em;
+  color: #aaa;
+}
+.blog-page-container a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.blog-page-container a:hover {
+  color: #af245e;
+}
+
+.hero-container {
+  height: 700px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-image: url("/images/parallax_1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.hero-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.hero-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/images/parallax_2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
+.hero-container .hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  z-index: 2;
+}
+.hero-container .hero-content span {
+  font-size: 67px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  display: block;
+}
+.hero-container .hero-content p {
+  font-size: 20px;
+  margin-top: 35px;
+}
+.hero-container .hero-see-more {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.hero-container .hero-see-more button {
+  padding: 15px 33px 15px 33px;
+  font-size: 12px;
+  font-weight: 400;
+  background-color: #d53176;
+  border-radius: 3px;
+  color: white;
+  border: none;
+  white-space: nowrap;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+.hero-container .hero-see-more button:hover {
+  background-color: #f0f0f0;
+}
+
+.content-box {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  top: -50px;
+}
+
+.stand-for-container {
+  padding: 20px;
+}
+.stand-for-container span {
+  display: flex;
+  justify-content: center;
+  font-size: 37px;
+  font-weight: 600;
+}
+
+.stand-for-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.responsive-label {
+  text-align: center;
+  flex: 1;
+  margin: 10px;
+}
+.responsive-label i {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+.responsive-label .h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.about-hestia-hero {
+  position: relative;
+  background-image: url("/images/contact.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 20px;
+}
+.about-hestia-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+.about-hestia-hero .about-text {
+  flex: 1;
+  margin-right: 20px;
+  z-index: 2;
+  padding-left: 100px;
+  padding-right: 150px;
+}
+.about-hestia-hero .about-text span {
+  font-size: 28px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+  z-index: 2;
+}
+.about-hestia-hero .about-text p {
+  font-size: 16px;
+  margin-top: 0;
+}
+.about-hestia-hero .cards-image {
+  align-self: flex-start;
+  padding-right: 100px;
+  padding-top: 20px;
+  max-width: 30%;
+  height: auto;
+  flex-shrink: 0;
+  z-index: 2;
+}
+.about-hestia-hero .blog-body {
+  margin-bottom: 20px;
+}
+.about-hestia-hero .blog-body .get-in-touch-hero {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.blog-body {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.blog-body h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.blog-body .blog-content-titles {
+  flex: 1 1 30%;
+  margin: 10px;
+}
+.blog-body .blog-content-titles .category {
+  font-size: 12px;
+  color: #666;
+}
+.blog-body .blog-content-titles .blog-title {
+  font-size: 20px;
+  margin: 10px 0;
+}
+.blog-body .blog-content-titles .blog-description {
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+  .blog-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .blog-body .blog-content-titles {
+    flex: 1 1 100%;
+    margin: 10px 0;
+  }
+}
+
+.get-in-touch-container {
+  position: relative;
+  background-image: url("/images/contact.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 20px;
+}
+.get-in-touch-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+.get-in-touch-container .about-text {
+  flex: 1;
+  margin-right: 20px;
+  z-index: 2;
+  padding-left: 100px;
+  padding-right: 150px;
+}
+.get-in-touch-container .about-text span {
+  font-size: 28px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+  z-index: 2;
+}
+.get-in-touch-container .about-text p {
+  font-size: 16px;
+  margin-top: 0;
+}
+.get-in-touch-container .cards-image {
+  align-self: flex-start;
+  padding-right: 100px;
+  padding-top: 20px;
+  max-width: 30%;
+  height: auto;
+  flex-shrink: 0;
+  z-index: 2;
+}
+.get-in-touch-container .blog-body {
+  margin-bottom: 20px;
+}
+.get-in-touch-container .blog-body .get-in-touch-hero {
+  text-align: center;
+  margin-top: 20px;
+}/*# sourceMappingURL=home.css.map */
