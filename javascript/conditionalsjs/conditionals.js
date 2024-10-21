@@ -41,3 +41,17 @@ function titleCase(sentence) {
 }
 
 titleCase("hello from all of us crazy people");
+
+// ASSIGNMENT NUMBER 4
+
+function toAlpha(str) {
+  const arrayOne = str.split("");
+  result = arrayOne
+    .sort()
+    .map((char) => char.toUpperCase())
+    .join("");
+  replacews = result.replace(/\s+/g, "");
+  return replacews;
+}
+
+console.log(toAlpha("this is a really long sentence lets see how it does"));
