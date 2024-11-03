@@ -1,6 +1,6 @@
 let balance = 50;
 
-function spinReels(bet) {
+function spinReels() {
   const symbols = ["@", "#", "*", "%", "!"];
   let reel1 = symbols[Math.floor(Math.random() * symbols.length)];
   let reel2 = symbols[Math.floor(Math.random() * symbols.length)];
@@ -29,13 +29,12 @@ async function pullLever() {
   console.log("Pulling the lever...");
   await new Promise((resolve) => setTimeout(resolve, 1000));
 
-  const bet = parseInt("10");
+  const bet = 10;
 
   const reels = spinReels(bet);
   console.log(`You spun: [ ${reels.join("  ")} ]`);
 
   const winnings = calculateWinnings(reels, bet);
-  const amountLost = bet - winnings;
   balance += winnings - bet;
 
   if (winnings > 0) {
