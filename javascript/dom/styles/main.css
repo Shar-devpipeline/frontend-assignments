@@ -1,0 +1,21 @@
+body {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  min-height: 100vh;
+  margin: 0;
+}
+
+.col1 {
+  background-color: #0388fc;
+  color: white;
+}
+
+.col2 {
+  background-color: #0056a1;
+  color: #a2d1fa;
+}
+
+.col3 {
+  background-color: #6fb8f7;
+}
