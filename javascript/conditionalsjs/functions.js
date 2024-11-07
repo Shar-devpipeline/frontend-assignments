@@ -1,14 +1,13 @@
 function longestWord(words) {
-  if (words.length === 0) {
-    return None;
-  }
-
   return words.reduce((longest, current) => {
-    console.log(current.length > longest.length ? current : longest);
-  });
+    return current.length > longest.length ? current : longest;
+  }, "");
 }
 
-// ASSIGNMENT #2
+const wordsArray = ["a", "bbbbbb", "cc"];
+console.log(longestWord(wordsArray));
+
+// // ASSIGNMENT #2
 
 function swap(str) {
   const first = str.charAt(0);
@@ -22,7 +21,7 @@ function swap(str) {
 swap("hello");
 swap("ryan");
 
-// ASSIGNMENT #3
+// // ASSIGNMENT #3
 
 const numbers = [1, 2, 3];
 
@@ -49,19 +48,15 @@ function combining(arrayOne, arrayTwo) {
     arrayOne.length > arrayTwo.length ? arrayOne.length : arrayTwo.length;
 
   for (let i = 0; i < maxLength; i++) {
-    if (i < arrayOne.length) {
-      combined.push(arrayOne[i]);
-    }
-    if (i < arrayTwo.length) {
-      combined.push(arrayTwo[i]);
-    }
+    i < arrayOne.length ? combined.push(arrayOne[i]) : null;
+    i < arrayTwo.length ? combined.push(arrayTwo[i]) : null;
   }
   console.log(combined);
 }
 
 combining(arrayOne, arrayTwo);
 
-// ASSIGNMENT #5
+// // ASSIGNMENT #5
 
 function titleCase(str) {
   const titleCased = str
@@ -75,11 +70,11 @@ function titleCase(str) {
 
 titleCase("What happened to all the rabbits?");
 
-// ASSIGNMENT #6
+// // ASSIGNMENT #6
 
 function longest(sentence) {
   const sepWords = sentence.split(" ");
-  const checkLongest = "";
+  let longestWord = "";
 
   for (let word of sepWords) {
     if (word.length > longestWord.length) {
@@ -91,7 +86,7 @@ function longest(sentence) {
 
 longest("Hello old friend how have you been");
 
-// ASSIGNMENT #7
+// // ASSIGNMENT #7
 
 function toAlpha(str) {
   const arrayOne = str.split("");
@@ -105,7 +100,7 @@ function toAlpha(str) {
 
 console.log(toAlpha("this is a really long sentence lets see how it does"));
 
-// ASSIGNMENT #8
+// // ASSIGNMENT #8
 
 const arrOne = ["a", "b", "c", "d"];
 const indecesOne = [1, 3];
@@ -124,7 +119,7 @@ function getLettersAtIndeced(arr, indices) {
 
 console.log(getLettersAtIndeced(arrOne, indecesOne));
 
-// ASSIGNMENT #9
+// // ASSIGNMENT #9
 
 const user = {
   userName: "alkatraz",
@@ -138,7 +133,7 @@ const changeStatus = (user) => {
 
 console.log(changeStatus(user));
 
-// ASSIGNMENT #10
+// // ASSIGNMENT #10
 
 function powerOf(base, exp) {
   let result = 1;
