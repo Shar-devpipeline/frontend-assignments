@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>ATM Machine</title>
+  </head>
+  <body>
+    <h1>Welome to the ATM</h1>
+
+    <div id="login-section">
+      <label for="email">Email: </label>
+      <input type="text" id="email" required />
+      <label for="password">Password:</label>
+      <input type="password" id="password" required />
+      <button onclick="login()">Login</button>
+
+      <p id="login-error" class="error hidden">Invalid Email or Password</p>
+    </div>
+
+    <div id="atm-menu" class="hidden">
+      <p id="balance-display"></p>
+      <button onclick="toggleTransaction('deposit')">Deposit</button>
+      <button onclick="toggleTransaction('withdraw')">Withdraw</button>
+      <button onclick="logout()">Logout</button>
+    </div>
+
+    <div id="deposit-section" class="hidden">
+      <label for="deposit-amount">Enter Deposit Amount: </label>
+      <input type="number" id="deposit-amount" min="1" step="1" required />
+      <button onclick="completeTransaction('deposit')">Complete Deposit</button>
+      <button onclick="toggleTransaction('')">Cancel</button>
+      <p id="deposit-error" class="error hidden">
+        Please enter a valid deposit amount
+      </p>
+    </div>
+
+    <div id="withdraw-section" class="hidden">
+      <label for="Withdraw-amount">Enter Withdraw Amount: </label>
+      <input type="number" id="withdraw-amount" min="1" step="1" required />
+      <button onclick="completeTransaction('withdraw')">
+        Complete Withdraw
+      </button>
+      <button onclick="toggleTransaction('')">Cancel</button>
+      <p id="withdraw-error" class="error hidden">
+        Please enter a valid withdraw amount
+      </p>
+    </div>
+
+    <div id="transaction-history" class="hidden">
+      <h3>Transaction History</h3>
+      <ul id="transaction-list"></ul>
+    </div>
+
+    <div id="receipt-section" class="hidden">
+      <h2>Transaction Receipt</h2>
+      <div id="receipt-display"></div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
