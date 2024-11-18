@@ -37,20 +37,20 @@ async function fetchAllNames() {
 
       randomButton.classList.add("button");
 
-      let lstItems = [];
+      let listNames = [];
       let highlightInterval = null;
       let highlightIndex = 0;
 
       function renderNames(names) {
         ul.innerHTML = "";
-        lstItems = [];
+        listNames = [];
 
         names.forEach((item, index) => {
           const li = document.createElement("li");
           li.innerHTML = formatName(item.name);
           li.dataset.index = index;
           ul.appendChild(li);
-          lstItems.push(li);
+          listNames.push(li);
         });
       }
 
@@ -61,11 +61,11 @@ async function fetchAllNames() {
         highlightIndex = currentIndex;
 
         highlightInterval = setInterval(() => {
-          lstItems.forEach((li) => li.classList.remove("highlight"));
+          listNames.forEach((li) => li.classList.remove("highlight"));
 
-          currentIndex = (currentIndex + 1) % lstItems.length;
+          currentIndex = (currentIndex + 1) % listNames.length;
 
-          lstItems[currentIndex].classList.add("highlight");
+          listNames[currentIndex].classList.add("highlight");
           highlightIndex = currentIndex;
         }, 100);
       }
@@ -80,8 +80,8 @@ async function fetchAllNames() {
           const rndUser = data.results[rndIndex].name;
 
           holderDiv.innerHTML = `The Winner is: ${formatName(rndUser)}`;
-          lstItems.forEach((li) => li.classList.remove("highlight"));
-          lstItems[rndIndex].classList.add("highlight");
+          listNames.forEach((li) => li.classList.remove("highlight"));
+          listNames[rndIndex].classList.add("highlight");
 
           jsConfetti.addConfetti();
         }, 2000);
