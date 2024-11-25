@@ -1,0 +1,22 @@
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #333;
+  padding: 10px 0;
+}
+h1 {
+  text-align: center;
+}
+
+.nav-link {
+  color: white;
+  margin: 0 15px;
+  padding: 5px 10px;
+  border: none;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  background-color: rgb(133, 110, 84);
+  color: black;
+}

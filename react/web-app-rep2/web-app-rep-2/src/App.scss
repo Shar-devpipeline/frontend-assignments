@@ -1,0 +1,15 @@
+@import "./styles/footer.scss";
+@import "./styles/navbar.scss";
+@import "./styles/profilecard.scss";
+
+.app {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
