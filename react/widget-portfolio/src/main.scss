@@ -31,7 +31,10 @@
     padding: 30px;
     border: 1px solid white;
     border-radius: 10px;
-
+    .widget-description {
+      align-items: center;
+      text-align: center;
+    }
     .widget-title {
       font-size: 30px;
     }

@@ -20,6 +20,19 @@ const FontSizer = () => {
         borderRadius: "10px",
       }}
     >
+      <div className="widget-description">
+        <h4>Description</h4>
+        <p>Adjusts the size of text dynamically.</p>
+        <h4>How to use:</h4>
+
+        <li>
+          Use "grow" and "shrink" buttons (or a slider) to increase or decrease
+          the font size.
+        </li>
+        <li>Observe the changes to the sample text.</li>
+
+        <hr />
+      </div>
       <h1 style={{ fontSize: `${fontSize}px` }}>Hello Friends</h1>
       <div>
         <button onClick={growFont} style={{ margin: "5px" }}>

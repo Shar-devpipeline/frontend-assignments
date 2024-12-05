@@ -20,19 +20,27 @@ const ClockWidget = () => {
   const [isMounted, setIsMounted] = useState(false);
 
   return (
-    <div
-      style={{
-        textAlign: "center",
-        padding: "30px",
-        border: "1px solid white",
-        borderRadius: "10px",
-      }}
-    >
-      {isMounted ? <Clock /> : <h2>Mount</h2>}
-      <button onClick={() => setIsMounted((prev) => !prev)}>
-        {isMounted ? "Unmount" : "Mount"}
-      </button>
-    </div>
+    <>
+      <div className="widget-description">
+        <div
+          style={{
+            textAlign: "center",
+            padding: "30px",
+            border: "1px solid white",
+            borderRadius: "10px",
+          }}
+        >
+          <h4>Description</h4>
+          <p>Displays the current time in real-time.</p>
+          <hr />
+
+          {isMounted ? <Clock /> : <h2>Mount</h2>}
+          <button onClick={() => setIsMounted((prev) => !prev)}>
+            {isMounted ? "Unmount" : "Mount"}
+          </button>
+        </div>
+      </div>
+    </>
   );
 };
 

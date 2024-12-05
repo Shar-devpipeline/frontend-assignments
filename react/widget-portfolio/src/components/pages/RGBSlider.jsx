@@ -11,6 +11,16 @@ const RGBSlider = () => {
 
   return (
     <div className="rgb-slider-container">
+      <div className="widget-description">
+        <h4>Description</h4>
+        <p>A color picker using individual red, green, and blue sliders.</p>
+        <h4>How to use:</h4>
+
+        <li>Move each slider to adjust the RGB values.</li>
+        <li>The resulting color will be displayed in real time.</li>
+
+        <hr />
+      </div>
       <div className="rgb-box-container" style={box}></div>
       <p>
         R: {red} - G: {green} - B: {blue}

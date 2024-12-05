@@ -23,7 +23,7 @@ function Navigation(props) {
       <BrowserRouter>
         <nav className="navigation">
           <h1 className="title">
-            <Link to="/">Home of the Widgets</Link>{" "}
+            <Link to="/">Home of the Widgets</Link>
           </h1>
           <div className="widget-links">
             <Link to="/counter-widget">Counter Widget</Link> *{" "}
@@ -40,27 +40,15 @@ function Navigation(props) {
 
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/counter-widget" component={CounterWidget} />
-          {" Counter Widget"}
-          Counter Widget
-          <Route exact path="/color-change" component={ColorChange} /> Color
-          Changer
-          <Route exact path="/clock-widget" component={ClockWidget} /> Clock
-          Widget
-          <Route exact path="/font-sizer" component={FontSizer} /> Font Sizer
-          <Route exact path="/rgb-slider" component={RGBSlider} /> RGB Slider
-          <Route exact path="/show-hide-toggle" component={ShowHideToggle} />
-          Show Hide Toggle
-          <Route exact path="/text-alignment" component={TextAlignment} /> Text
-          Alignment
-          <Route
-            exact
-            path="/toggle-greeting"
-            component={ToggleGreeting}
-          />{" "}
-          Toggle Greeting
-          <Route exact path="/weather-widget" component={WeatherWidget} />{" "}
-          Weather Widget
+          <Route path="/counter-widget" component={CounterWidget} />
+          <Route path="/color-change" component={ColorChange} />
+          <Route path="/clock-widget" component={ClockWidget} />
+          <Route path="/font-sizer" component={FontSizer} />
+          <Route path="/rgb-slider" component={RGBSlider} />
+          <Route path="/show-hide-toggle" component={ShowHideToggle} />
+          <Route path="/text-alignment" component={TextAlignment} />
+          <Route path="/toggle-greeting" component={ToggleGreeting} />
+          <Route path="/weather-widget" component={WeatherWidget} />
         </Switch>
       </BrowserRouter>
     </div>

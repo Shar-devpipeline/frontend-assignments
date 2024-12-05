@@ -19,6 +19,14 @@ const ColorChanger = () => {
           borderRadius: "10px",
         }}
       >
+        <div className="widget-description">
+          <h4>Description</h4>
+          <p>A widget to change the text color dynamically.</p>
+          <h4>How to use:</h4>
+          <li>Choose a color from a color picker or predefined options.</li>
+          <li>The text will update to reflect your choice.</li>
+        </div>
+        <hr />
         <h2>What color would you like the text to be?</h2>
         <h1 style={{ color: color }}>{color || "Color Changer"}</h1>
         <input

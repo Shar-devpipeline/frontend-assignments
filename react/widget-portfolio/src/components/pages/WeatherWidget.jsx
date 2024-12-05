@@ -52,6 +52,14 @@ const WeatherWidget = () => {
         borderRadius: "10px",
       }}
     >
+      <div className="widget-description">
+        <h4>Description</h4>
+        <p>Displays current weather information based on a location.</p>
+        <h4>How to use:</h4>
+
+        <li>View the weather details like temperature and conditions</li>
+      </div>
+      <hr />
       <h2>Weather Widget</h2>
       {loading ? (
         <p>Loading...</p>
