@@ -20,6 +20,12 @@ const reviewsData = [
     rating: 5,
     text: "Amazing selection of items. Very happy with my purchase!",
   },
+  {
+    id: 4,
+    name: "Jill Hansen",
+    rating: 5,
+    text: "What a fun website!",
+  },
 ];
 
 const Home = ({ products }) => {

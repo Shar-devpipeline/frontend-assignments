@@ -1,10 +1,9 @@
 import React from "react";
-import "../style/about.scss";
+import "../style/pages/about.scss";
 
 const About = () => {
   return (
     <div className="about-page">
-      {/* Capstone Section */}
       <section className="capstone-section">
         <h2>Capstone Project:</h2>
         <p>

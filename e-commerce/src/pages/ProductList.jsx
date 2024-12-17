@@ -4,26 +4,35 @@ import Modal from "react-modal";
 
 import ProductCard from "../components/ProductCard";
 
-import "../style/home.scss";
+import "../style/pages/home.scss";
 
 Modal.setAppElement("#root");
-const API_URL = "https://fakestoreapi.com/products";
+const API = "https://fakestoreapi.com/products";
 
 export const fetchProducts = async () => {
-  const response = await fetch(API_URL);
+  const response = await fetch(API);
   return response.json();
 };
 
-const ProductList = ({ addToCart, increaseQuantity, decreaseQuantity }) => {
+const ProductList = ({ addToCart }) => {
   const [products, setProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [quantity, setQuantity] = useState({});
+  const [categories, setCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [sort, setSort] = useState("default");
 
   useEffect(() => {
     const loadProducts = async () => {
       const data = await fetchProducts();
       setProducts(data);
+      setFilteredProducts(data);
+
+      const getCaterories = ["All", ...new Set(data.map((p) => p.category))];
+      setCategories(getCaterories);
+
       const initialQuantity = data.reduce((acc, product) => {
         acc[product.id] = 1;
         return acc;
@@ -64,14 +73,65 @@ const ProductList = ({ addToCart, increaseQuantity, decreaseQuantity }) => {
     }));
   };
 
+  const handleFilterChange = (category) => {
+    setSelectedCategory(category);
+    let filtered = products;
+
+    if (category !== "All") {
+      filtered = products.filter((product) => product.category === category);
+    }
+    setFilteredProducts(filtered);
+    handleSortChange(sort, filtered);
+  };
+
+  const handleSortChange = (option, inputProducts = filteredProducts) => {
+    setSort(option);
+    let sortedProducts = [...inputProducts];
+
+    if (option === "priceLowHigh") {
+      sortedProducts.sort((a, b) => a.price - b.price);
+    } else if (option === "priceHighLow") {
+      sortedProducts.sort((a, b) => b.price - a.price);
+    }
+
+    setFilteredProducts(sortedProducts);
+  };
+
   return (
     <div className="main-content">
       <h1 className="slogan">
         "Endless Charm: Where Every Click Unveils a New Delight!"
       </h1>
+      <div className="controls">
+        <div className="filter">
+          <label>Filter by Category: </label>
+          <select
+            value={selectedCategory}
+            onChange={(e) => handleFilterChange(e.target.value)}
+          >
+            {categories.map((category) => (
+              <option key={category} value={category}>
+                {category}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div className="sort">
+          <label>Sort by: </label>
+          <select
+            value={sort}
+            onChange={(e) => handleSortChange(e.target.value)}
+          >
+            <option value="default">Default</option>
+            <option value="priceLowHigh">Price: Low to High</option>
+            <option value="priceHighLow">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
 
       <div className="product-list">
-        {products.map((product) => (
+        {filteredProducts.map((product) => (
           <div
             key={product.id}
             className="product-item"
